@@ -1,5 +1,6 @@
+"use client"
 import "../styles/globals.css"
-import { Inter } from 'next/font/google'
+import { ThemeProvider } from "next-themes"
 
 // components
 import Navbar from "@/components/Navbar"
@@ -18,8 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <ThemeProvider enableSystem={true} attribute="class">
         <Navbar />
-        {children}</body>
+        {children}
+        
+        </ThemeProvider>
+        </body>
     </html>
   )
 }
