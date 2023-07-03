@@ -1,25 +1,37 @@
 import React from "react"
+import { IconType } from 'react-icons';
+import { AiFillHtml5, AiFillGithub} from 'react-icons/ai';
+import {MdCss} from "react-icons/md"
+import {FaPython, FaBootstrap, FaReact} from "react-icons/fa6"
+import {DiJsBadge, DiMysql,DiNodejs,DiMongodb,DiDjango, DiPostgresql, DiHeroku,DiFirebase} from "react-icons/di";
+import { FaStripeS} from "react-icons/fa";
+import { SiNextdotjs , SiTailwindcss, SiTypescript} from "react-icons/si";
 
 
-const skills = [
-    {skill : "HTML"},
-    {skill : "CSS"},
-    {skill : "JavaScript"},
-    {skill : "TypeScript"},
-    {skill : "Python"},
-    {skill : "React"},
-    {skill : "NextJs"},
-    {skill : "Bootstrap"},
-    {skill : "TailWind CSS"},
-    {skill : "Material UI"},
-    {skill : "MongoDb"},
-    {skill : "Sql"},
-    {skill : "NoSql"},
-    {skill : "Git/Github"},
-    {skill : "Netlify"},
-    {skill : "Heroku"},
-    {skill : "HTML"},
-    {skill : "APIs"},
+interface SkillItem{
+    skill: string;
+    icon:IconType;
+}
+
+const skills: SkillItem[] = [
+    {skill : "HTML", icon:AiFillHtml5},
+    {skill : "CSS", icon: MdCss},
+    {skill : "JavaScript", icon: DiJsBadge},
+    {skill : "NodeJs", icon: DiNodejs},
+    {skill : "TypeScript", icon: SiTypescript},
+    {skill : "Python", icon: FaPython},
+    {skill : "React", icon: FaReact},
+    {skill : "Next", icon: SiNextdotjs},
+    {skill : "Tailwind", icon: SiTailwindcss},
+    {skill : "Bootstrap", icon: FaBootstrap},
+    {skill : "Stripe", icon: FaStripeS},
+    {skill : "Firebase", icon: DiFirebase},
+    {skill : "MongoDb", icon: DiMongodb},
+    {skill : "PostgresSql", icon: DiPostgresql},
+    {skill : "NoSql", icon: DiMysql},
+    {skill : "Git/Github", icon: AiFillGithub},
+    {skill : "Django", icon: DiDjango},
+    {skill : "Heroku", icon: DiHeroku},
 
 ]
 
@@ -28,10 +40,11 @@ const About = () => {
         <section id="about">
             <div className="my-12 pb-12 md:pt-16 md:pb-48">
                 <h1 className="text-center font-bold text-4xl">About me</h1>
-                <div className="flex flex-col space-y-10 item-stretch justify-center 
-                align-top md:flex-row md:text-left md:p-4 md:space-y-0 md:space-x-10">
+                <hr className="w-6 h-1 mx-auto my-4 bg-purple-500 border-0 rounded"></hr>
+                <div className="flex flex-col space-y-10 items-stretch justify-center 
+                align-top md:space-x-10 md:space-y-0 md:p-4 md:flex-row md:text-left">
                     <div className="md:w-1/2" >
-                        <h1 className="text center text-2xl font-bold mb-6 md:text-left">Get to know me</h1>
+                        <h1 className="text-center text-2xl font-bold mb-6 md:text-left">Get to know me</h1>
                         <p>
                         
                         As a developer I am{" "}
@@ -54,12 +67,13 @@ const About = () => {
             <br />
                 </div>
                     <div className="md:w-1/2">
-                        <h1 className="text center text-2xl font-bold mb-6 md:text-left">Skills</h1>
+                        <h1 className="text-center text-2xl font-bold mb-6 md:text-left">Skills</h1>
                         <div className="flex flex-wrap flex-row justify-center md:justify-start">
                             {skills.map((item,idx)=>{
+                                 const IconComponent = item.icon;
                                 return <p className="bg-gray-200 px-4 py-2 mr-2 mt-2 text-grey-500 rounded font-semibold text-black" 
                                 
-                                key={idx}>{item.skill}</p>
+                                key={idx}> <IconComponent size={24} /></p>
                             })}
                         </div>
                     </div>
