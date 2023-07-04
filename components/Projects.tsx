@@ -34,7 +34,7 @@ const projects =[
         "title": "BrightOutLook",
         "link": "https://brightoutlooknw23.netlify.app/",
         "img": hackImg,
-        "desc": "React integrated with OpenAi ChatGpt frontend application to provide children with a positive outlook built during a hackathon.",
+        "desc": "React frontend application integrated with OpenAi ChatGpt to provide children with a positive outlook built during a hackathon.",
         "alt": "picture of positive outlook app",
         "git": "https://github.com/Edlenh/NwHackathonv2",
       },
@@ -42,7 +42,7 @@ const projects =[
         "id": 4,
         "title": "Behavior Bridge",
         "link": "https://behavior-bridge.vercel.app",
-        "desc": "NextJs integrated with OpenAi ChatGpt frontend application built to support parents with their children with special needs by tracking data.",
+        "desc": "NextJs frontend application integrated with OpenAi ChatGpt built to support parents with their children with special needs by tracking data.",
         "img": behaviorImg,
         "alt": "picture of social media app",
         "git": "https://github.com/Edlenh/BehaviorBridge"
