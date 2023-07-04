@@ -39,7 +39,7 @@ const Navbar = () => {
             <div>
                 <div className="flex items-center justify between py-3 md:py-5 md:block">
                 <div className="container flex items-center space-x-2">
-                 <h1 className="text-2xl font-bold">Edward Herrera</h1>
+                 <h1 className="text-2xl font-bold">EH</h1>
             </div>
             <div className="md:hidden">
                 <button onClick={()=> setNavbar(!navbar)}>
