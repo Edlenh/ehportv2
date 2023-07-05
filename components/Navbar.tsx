@@ -4,9 +4,8 @@ import React from "react"
 import {useState} from "react"
 import {Link } from 'react-scroll'
 import {useTheme} from "next-themes"
-import {RiMoonFill, RiSunLine} from "react-icons/ri"
+import {RiSunFoggyFill, RiMoonFoggyFill} from "react-icons/ri"
 import {IoMdMenu, IoMdClose} from "react-icons/io"
-
 
 // assign componenets with types
 interface NavItem{
@@ -76,14 +75,14 @@ const Navbar = () => {
                         onClick={()=> setTheme("light")}
                         className="bg-slate-100 p-2 rounded-xl"
                     >
-                        <RiSunLine size={25} color="black"/>
+                        <RiSunFoggyFill size={25} color="black"/>
                         </button>
                 ) :(
                     <button
                     onClick={()=> setTheme("dark")}
                     className="bg-slate-50 p-2 rounded xl"
                     >
-                    <RiMoonFill size={25}/>
+                    <RiMoonFoggyFill size={25}/>
                     </button>
                 )}
             </div>

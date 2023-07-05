@@ -1,3 +1,4 @@
+"use client"
 import React from "react"
 import { IconType } from 'react-icons';
 import { AiFillHtml5, AiFillGithub} from 'react-icons/ai';
@@ -8,7 +9,7 @@ import { SiNextdotjs , SiTailwindcss, SiTypescript,
 SiMysql, SiPostgresql, SiNodedotjs, SiCss3, SiDjango, 
 SiMongodb, SiFirebase, SiJsonwebtokens, SiHandlebarsdotjs, 
 SiNetlify, SiMongoose, SiMui, SiVercel,SiVite } from "react-icons/si";
-
+import LaptopAnimation from "./ProjectAni";
 
 interface SkillItem{
     skill: string;
@@ -48,12 +49,12 @@ const About = () => {
     return ( 
         <section id="about">
             <div className="my-12 pb-12 md:pt-16 md:pb-48">
-                <h1 className="text-center font-bold text-4xl">About me</h1>
+                <h1 className="font-serif text-center font-bold text-4xl">About me</h1>
                 <hr className="w-6 h-1 mx-auto my-4 bg-purple-500 border-0 rounded"></hr>
                 <div className="flex flex-col space-y-10 items-stretch justify-center 
                 align-top md:space-x-10 md:space-y-0 md:p-4 md:flex-row md:text-left">
                     <div className="md:w-1/2" >
-                        <h1 className="text-center text-2xl font-bold mb-6 md:text-left">Get to know me</h1>
+                        <h1 className="font-serif text-center text-2xl font-bold mb-6 md:text-left">Get to know me</h1>
                         <p>
                         
                         As a developer I am{" "}
@@ -76,7 +77,7 @@ const About = () => {
             <br />
                 </div>
                     <div className="md:w-1/2">
-                        <h1 className="text-center text-2xl font-bold mb-6 md:text-left">Skills</h1>
+                        <h1 className="font-serif text-center text-2xl font-bold mb-6 md:text-left">Skills</h1>
                         <div className="flex flex-wrap flex-row justify-center md:justify-start">
                             {skills.map((item,idx)=>{
                                  const IconComponent = item.icon;
@@ -84,6 +85,7 @@ const About = () => {
                                 key={idx}> <IconComponent size={24} /></p>
                             })}
                         </div>
+                            <LaptopAnimation />
                     </div>
                 </div>
             </div>
