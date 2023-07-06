@@ -19,7 +19,7 @@ const Hero = () => {
                         Creating applications for the greater good.</p>
                         <Link
                         to= "projects"
-                        className="text-neutral-100 font-semibold px-6 py-3 bg-purple-500 rounded shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
+                        className="cursor-pointer text-neutral-100 font-semibold px-6 py-3 bg-purple-500 rounded shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
                         spy={true}
                         smooth={true}
                         offset={-100}
@@ -37,7 +37,7 @@ const Hero = () => {
                 offset={-100}
                 duration={500}
                 >
-                    <HiArrowDown size={35} className="animate-bounce"/>
+                    <HiArrowDown size={35} className="animate-bounce cursor-pointer"/>
                 </Link>
             </div>
         </section>
