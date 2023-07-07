@@ -25,6 +25,10 @@ const Hero = () => {
                         offset={-100}
                         duration={500}> Projects 
                         </Link>
+                        <a
+                        className=" ml-4 cursor-pointer text-neutral-100 font-semibold px-6 py-3 bg-purple-500 rounded shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
+                        href="https://flowcv.com/resume/idfeolatl8" target="_blank"> Resume
+                        </a>
                 </div>
             </div>
 
